@@ -4,6 +4,6 @@ class PedometerReading < ActiveRecord::Base
   end
 
   def miles
-    self.steps/100
+    self.steps/2000
   end
 end
