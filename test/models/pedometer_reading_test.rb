@@ -9,6 +9,10 @@ class PedometerReadingTest < ActiveSupport::TestCase
     assert_equal 1, pedometer_readings(:two).miles
   end
 
+  test "daily steps" do
+    assert_equal 2750, PedometerReading.daily_steps
+  end
+
   # test "the truth" do
   #   assert true
   # end

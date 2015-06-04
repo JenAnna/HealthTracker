@@ -2,12 +2,16 @@
 
 one:
   steps: 1000
+  date: <%= Time.new(2015, 06, 05)%>
 
 two:
   steps: 2500
+  date: <%= Time.now%>
 
 three:
   steps: 150
+  date: <%= Time.new(2015, 06, 05)%>
 
 four:
   steps: 250
+  date: <%= Time.now%>
