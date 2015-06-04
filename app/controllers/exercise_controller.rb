@@ -2,7 +2,7 @@ class ExerciseController < ApplicationController
   before_action :set_exercise, only: [:show, :edit, :update, :destroy]
 
   def index
-    @exercise = Exercise.all
+    @exercises = Exercise.all
   end
 
   def show
