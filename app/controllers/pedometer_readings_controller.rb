@@ -69,6 +69,6 @@ class PedometerReadingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pedometer_reading_params
-      params.require(:pedometer_reading).permit(:steps)
+      params.require(:pedometer_reading).permit(:steps, :date)
     end
 end

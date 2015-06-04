@@ -5,6 +5,7 @@ class CreateExercises < ActiveRecord::Migration
       t.integer :calories_burned
       t.integer :time_in_minutes
       t.string :description
+      t.date :date
 
       t.timestamps null: false
     end
