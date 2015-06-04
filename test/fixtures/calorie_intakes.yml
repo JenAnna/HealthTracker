@@ -1,7 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  calories: 1
+  calories: 3500
+  date: "2015-06-10"
 
 two:
-  calories: 1
+  calories: 2750
+  date: "2015-06-11"
