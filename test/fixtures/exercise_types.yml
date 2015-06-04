@@ -1,9 +1,29 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  description: MyString
-  calories_burned_per_minute: 1
+  description: Aerobics
+  calories_burned_per_minute: 8
 
 two:
-  description: MyString
-  calories_burned_per_minute: 1
+  description: Aerobics, Low Impact
+  calories_burned_per_minute: 6
+
+three:
+  description: Calisthenics, light
+  calories_burned_per_minute: 4
+
+four:
+  description: Calisthenics, fast
+  calories_burned_per_minute: 10
+
+five:
+  description: Cycling
+  calories_burned_per_minute: 10
+
+six:
+  description: Walking
+  calories_burned_per_minute: 3.5
+
+seven:
+  description: Yoga
+  calories_burned_per_minute: 2
