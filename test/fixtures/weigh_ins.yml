@@ -3,9 +3,9 @@
 one:
   weight: 100
   units: MyString
-  date: 2015-06-04
+  date: "2015-06-04"
 
 two:
   weight: 120
   units: MyString
-  date: 2015-06-01
+  date: "2015-06-01"
