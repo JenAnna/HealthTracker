@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Calories</th>
+      <th>Date</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,6 +15,7 @@
     <% @calorie_intakes.each do |calorie_intake| %>
       <tr>
         <td><%= calorie_intake.calories %></td>
+        <td><%= calorie_intake.date %></td>
         <td><%= link_to 'Show', calorie_intake %></td>
         <td><%= link_to 'Edit', edit_calorie_intake_path(calorie_intake) %></td>
         <td><%= link_to 'Destroy', calorie_intake, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20150604163715) do
 
   create_table "calorie_intakes", force: :cascade do |t|
     t.integer  "calories"
+    t.date     "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -31,6 +32,7 @@ ActiveRecord::Schema.define(version: 20150604163715) do
     t.integer  "calories_burned"
     t.integer  "time_in_minutes"
     t.string   "description"
+    t.date     "date"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
@@ -38,6 +40,7 @@ ActiveRecord::Schema.define(version: 20150604163715) do
   create_table "pedometer_readings", force: :cascade do |t|
     t.integer  "steps"
     t.integer  "calories_burned"
+    t.date     "date"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
@@ -45,6 +48,7 @@ ActiveRecord::Schema.define(version: 20150604163715) do
   create_table "weigh_ins", force: :cascade do |t|
     t.integer  "weight"
     t.string   "units"
+    t.date     "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
