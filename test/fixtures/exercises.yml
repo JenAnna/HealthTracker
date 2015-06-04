@@ -4,10 +4,12 @@ one:
   exercise_type_id: 1
   calories_burned: 1
   time_in_minutes: 1
+  date: "2015-06-01"
   description: MyString
 
 two:
   exercise_type_id: 1
   calories_burned: 1
   time_in_minutes: 1
+  date: "2015-06-02"
   description: MyString
