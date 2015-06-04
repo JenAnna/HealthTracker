@@ -2,8 +2,16 @@
 
 one:
   calories: 3500
-  date: "2015-06-10"
+  date: <%= Time.new(2015, 06, 05)%>
 
 two:
   calories: 2750
-  date: "2015-06-11"
+  date: <%=Time.new(2015, 05, 05)%>
+
+three:
+  calories: 150
+  date: <%= Time.now %>
+
+four:
+  calories: 300
+  date: <%= Time.now %>
