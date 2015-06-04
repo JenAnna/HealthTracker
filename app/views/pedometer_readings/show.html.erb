@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Steps:</strong>
+  <%= @pedometer_reading.steps %>
+</p>
+
+<%= link_to 'Edit', edit_pedometer_reading_path(@pedometer_reading) %> |
+<%= link_to 'Back', pedometer_readings_path %>

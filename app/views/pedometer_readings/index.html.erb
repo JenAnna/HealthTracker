@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pedometer Readings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Steps</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pedometer_readings.each do |pedometer_reading| %>
+      <tr>
+        <td><%= pedometer_reading.steps %></td>
+        <td><%= link_to 'Show', pedometer_reading %></td>
+        <td><%= link_to 'Edit', edit_pedometer_reading_path(pedometer_reading) %></td>
+        <td><%= link_to 'Destroy', pedometer_reading, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pedometer reading', new_pedometer_reading_path %>

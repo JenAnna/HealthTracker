@@ -1,0 +1,2 @@
+module PedometerReadingsHelper
+end
