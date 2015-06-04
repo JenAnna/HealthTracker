@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Exercise Entries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Exercise Type</th>
+      <th>Calories Burned</th>
+      <th>Time (min)</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @exercises.each do |exercise| %>
+      <tr>
+        <td><%= exercise.description %></td>
+        <td><%= exercise.exercise_type.description %></td>
+        <td><%= exercise.calories_burned %></td>
+        <td><%= exercise.time_in_minutes %></td>
+        <td><%= exercise.date%></td>
+        <td><%= link_to 'Show', weigh_in %></td>
+        <td><%= link_to 'Edit', edit_weigh_in_path(weigh_in) %></td>
+        <td><%= link_to 'Destroy', weigh_in, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Exercise Entry', new_exercise_path %>

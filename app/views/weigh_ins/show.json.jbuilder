@@ -1,1 +1,1 @@
-json.extract! @weigh_in, :id, :weight, :units, :created_at, :updated_at
+json.extract! @weigh_in, :id, :weight, :units, :date, :created_at, :updated_at
