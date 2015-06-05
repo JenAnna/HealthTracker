@@ -1,4 +1,8 @@
 class Exercise < ActiveRecord::Base
+  validates :date, presence: true
+  validates :time_in_minutes, presence: true
+  validates :exercise_type, presence: true
+  
   belongs_to :exercise_type
 
   before_save :calories_burned
