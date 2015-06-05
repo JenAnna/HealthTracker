@@ -30,6 +30,18 @@ class ExercisesController < ApplicationController
     end
   end
 
+  def update
+    respond_to do |format|
+      if @exercise.update(exercise_params)
+        format.html { redirect_to @exercise, notice: 'Exercise entry was successfully updated.' }
+        format.json { render :show, status: :ok, location: @exercise }
+      else
+        format.html { render :edit }
+        format.json { render json: @exercise.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   def destroy
     @exercise.destroy
     respond_to do |format|

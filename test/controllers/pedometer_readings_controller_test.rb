@@ -18,7 +18,7 @@ class PedometerReadingsControllerTest < ActionController::TestCase
 
   test "should create pedometer_reading" do
     assert_difference('PedometerReading.count') do
-      post :create, pedometer_reading: { steps: @pedometer_reading.steps }
+      post :create, pedometer_reading: { steps: @pedometer_reading.steps, date: Date.today }
     end
 
     assert_redirected_to pedometer_reading_path(assigns(:pedometer_reading))
@@ -35,7 +35,7 @@ class PedometerReadingsControllerTest < ActionController::TestCase
   end
 
   test "should update pedometer_reading" do
-    patch :update, id: @pedometer_reading, pedometer_reading: { steps: @pedometer_reading.steps }
+    patch :update, id: @pedometer_reading, pedometer_reading: { steps: @pedometer_reading.steps, date: Date.today }
     assert_redirected_to pedometer_reading_path(assigns(:pedometer_reading))
   end
 

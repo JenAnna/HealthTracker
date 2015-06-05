@@ -18,7 +18,7 @@ class CalorieIntakesControllerTest < ActionController::TestCase
 
   test "should create calorie_intake" do
     assert_difference('CalorieIntake.count') do
-      post :create, calorie_intake: { calories: @calorie_intake.calories }
+      post :create, calorie_intake: { calories: @calorie_intake.calories, date: Date.today }
     end
 
     assert_redirected_to calorie_intake_path(assigns(:calorie_intake))
@@ -35,7 +35,7 @@ class CalorieIntakesControllerTest < ActionController::TestCase
   end
 
   test "should update calorie_intake" do
-    patch :update, id: @calorie_intake, calorie_intake: { calories: @calorie_intake.calories }
+    patch :update, id: @calorie_intake, calorie_intake: { calories: @calorie_intake.calories, date: Date.today }
     assert_redirected_to calorie_intake_path(assigns(:calorie_intake))
   end
 
