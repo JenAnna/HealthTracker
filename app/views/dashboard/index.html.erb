@@ -2,7 +2,7 @@
 
 <div class="dash"  id="important">
   <p class="in-dash">Net Calories Today</p>
-  <p class="number"><%= @calorie_intakes.calories_today -  @exercises.daily_calories_burned%></p>
+  <p class="number"><%= @calorie_intakes.calories_today -  @exercises.daily_calories_burned - @pedometer_readings.daily_step_calories%></p>
 </div><br>
 <div class="information">
   <div class="dash">
