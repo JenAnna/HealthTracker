@@ -1,15 +1,18 @@
-<p>Net Calories Today</p>
+<div class="title">Your Health Tracker</div>
 
-<p>Total Calories Consumed Today</p>
+<p class="dash">Net Calories Today</p>
+<p class="dash">Total Calories Consumed Today</p>
 <p><%= @calorie_intakes.calories_today %></p>
-<p>Total Calories Burned Today</p>
-<p><%= @exercises.%></p>
+<p class="dash">Total Calories Burned Today</p>
+<p><%= @exercises.daily_calories_burned%></p>
 
-<p>Total Steps Taken Today</p>
+<p class="dash">Total Steps Taken Today</p>
 <p><%= @pedometer_readings.daily_steps %></p>
 
 
-<div class=foot><%= link_to 'Pedometer readings', pedometer_readings_path %> |
-<%= link_to 'Weigh-ins', weigh_ins_path %> |
-<%= link_to 'Calories Consumed', calorie_intakes_path %> |
-<%= link_to 'Exercises', exercises_path %></div>
+<div class="foot">
+  <button class="btn"><%= link_to 'Pedometer readings', pedometer_readings_path %></button>
+  <button class="btn"><%= link_to 'Weigh-ins', weigh_ins_path %></button>
+  <button class="btn"><%= link_to 'Calories Consumed', calorie_intakes_path %></button>
+  <button class="btn"><%= link_to 'Exercises', exercises_path %></button>
+</div>
