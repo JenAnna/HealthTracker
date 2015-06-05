@@ -2,7 +2,7 @@
 
 one:
   steps: 1000
-  date: <%= Time.new(2015, 06, 05)%>
+  date: <%= Time.new(2015, 06, 03)%>
 
 two:
   steps: 2500
@@ -10,7 +10,7 @@ two:
 
 three:
   steps: 150
-  date: <%= Time.new(2015, 06, 05)%>
+  date: <%= Time.new(2015, 06, 03)%>
 
 four:
   steps: 250

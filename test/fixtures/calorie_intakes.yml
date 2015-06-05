@@ -2,7 +2,7 @@
 
 one:
   calories: 3500
-  date: <%= Time.new(2015, 06, 05)%>
+  date: <%= Time.new(2015, 06, 03)%>
 
 two:
   calories: 2750
