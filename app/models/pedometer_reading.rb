@@ -19,7 +19,7 @@ class PedometerReading < ActiveRecord::Base
   def self.daily_steps
     total = 0
     self.select do |e|
-      if e.date.today == Date.today
+      if e.date == Date.today
         total += e.steps
       end
     end
