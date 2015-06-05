@@ -2,16 +2,20 @@
 
 one:
   steps: 1000
+  calories_burned: 200
   date: <%= Date.new(2015, 06, 03)%>
 
 two:
   steps: 2500
+  calories_burned: 380
   date: <%= Date.today%>
 
 three:
   steps: 150
+  calories_burned: 10
   date: <%= Date.new(2015, 06, 03)%>
 
 four:
   steps: 250
+  calories_burned: 20
   date: <%= Date.today%>
