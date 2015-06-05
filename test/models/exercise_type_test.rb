@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class ExerciseTypeTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "exercise type" do
+    assert_equal "Aerobics", exercise_types(:one).description
+  end
 end

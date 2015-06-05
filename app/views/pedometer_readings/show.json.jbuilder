@@ -1,1 +1,1 @@
-json.extract! @pedometer_reading, :id, :steps, :created_at, :updated_at
+json.extract! @pedometer_reading, :id, :steps, :date, :created_at, :updated_at
