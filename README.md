@@ -1,28 +1,46 @@
-== README
+#HealthTracker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The HealthTracker application will track the user's calorie consumption and activities. It is simple to use but effective in helping the user meet there weight goals.
 
-Things you may want to cover:
+####User Instructions
+  To get started, the user will need to create a new entry which they have access to on the dashboard page. With each data entry, the dashboard display will update as well as the the pages that refer to the entry.
 
-* Ruby version
+  The user can enter as many exercise or calorie consumption per day. However the user can only enter their weight once a day.
 
-* System dependencies
+  Required Fields for Creating New Entries
+  - Calorie Consumed: amount of calories, date of entry
+  - Steps Taken: steps, date of entry
+  - Exercise Log: type of exercise, date of entry, duration time
+  - Weigh-in: weight amount, weight unit, date of entry
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The user can go back and make changes to their entries....(possible token information).
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+####Page Routes:
+All pages have access links to the index of other .
+- Dashboard Page
+  Gives the user an summary of their status that day. It shows net calories, daily calorie intake, daily calorie burn, and total daily steps. The user can add any new information from this page.  
+
+- Calorie intake readings
+  index: json and html
+  edit: html
+  new: html
+  show: json and html
+
+- Exercise readings
+  index: json and html
+  edit: html
+  new: html
+  show: json and html
+
+- Pedometer readings
+  index: json and html
+  edit: html
+  new: html
+  show: json and html
+
+- Weigh in readings
+  index: json and html
+  edit: html
+  new: html
+  show: json and html  
