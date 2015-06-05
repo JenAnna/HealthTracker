@@ -1,7 +1,7 @@
 class PedometerReading < ActiveRecord::Base
   validates :date, presence: true
   validates :steps, presence: true
-  before_save :calories_burned
+  before_save :calories
 
   def calories
     self.calories_burned = self.steps/20
