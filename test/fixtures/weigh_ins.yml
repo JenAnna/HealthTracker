@@ -3,9 +3,14 @@
 one:
   weight: 100
   units: MyString
-  date: "2015-06-04"
+  date: <%= Date.new(2015, 06, 02)%>
 
 two:
+  weight: 110
+  units: MyString
+  date: <%= Date.new(2015, 06, 03)%>
+
+three:
   weight: 120
   units: MyString
-  date: "2015-06-01"
+  date: <%= Date.today %>

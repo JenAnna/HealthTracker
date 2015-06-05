@@ -10,16 +10,21 @@ class Exercise < ActiveRecord::Base
 
   def self.daily_calories_burned
     total = 0
-    self.select do |e|
-      if e.calories_burned.to_i == 0
-        e.calculate_calories_burned
-      end
-      if
-        e.date.day == Time.now.day && e.date.month == Time.now.month && e.date.year == Time.now.year
-        total += e.calories_burned.to_f
-      end
-    end
-    total
+    calories_today = self.select {|e| e.date == Date.today}
+    # calories_today.each do |e|
+    #   total += e.calories_burned
+    # end
+
+    calories_today.sum &:calories_burned
+    # if e.calories_burned.to_i == 0
+      #   e.calculate_calories_burned
+      # end
+    #   if
+    #     e.date.today == Date.today
+    #     total += e.calories_burned.to_f
+    #   end
+    # end
+    # total
   end
 
 

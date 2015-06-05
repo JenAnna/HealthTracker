@@ -3,23 +3,27 @@
 one:
   exercise_type_id: 1
   time_in_minutes: 1
-  date: <%= Time.new(2015, 06, 01) %>
+  date: <%= Date.new(2015, 06, 01) %>
+  calories_burned: 200
   description: MyString
 
 two:
   exercise_type_id: 2
   time_in_minutes: 1
-  date: <%= Time.new(2015, 06, 02) %>
+  date: <%= Date.new(2015, 06, 02) %>
+  calories_burned: 300
   description: MyString
 
 three:
   exercise_type_id: 3
   time_in_minutes: 15
-  date: <%= Time.now %>
+  date: <%= Date.today %>
   description: MyString
+  calories_burned: 100
 
 four:
   exercise_type_id: 4
   time_in_minutes: 45
-  date: <%= Time.now %>
+  date: <%= Date.today %>
   description: MyString
+  calories_burned: 400
