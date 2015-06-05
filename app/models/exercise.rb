@@ -3,6 +3,7 @@ class Exercise < ActiveRecord::Base
 
   before_save :calories_burned
 
+
   def calculate_calories_burned
     self.calories_burned = self.time_in_minutes * self.exercise_type.calories_burned_per_minute
   end
