@@ -11,4 +11,5 @@ class ExerciseTest < ActiveSupport::TestCase
   test "daily calorie burn" do
     assert_equal 500, Exercise.daily_calories_burned
   end
+
 end
