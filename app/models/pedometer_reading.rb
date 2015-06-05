@@ -1,9 +1,10 @@
 class PedometerReading < ActiveRecord::Base
   validates :date, presence: true
   validates :steps, presence: true
+  before_save :calories
 
   def calories
-    self.steps/20
+    self.calories_burned = self.steps/20
   end
 
   def miles
@@ -13,7 +14,7 @@ class PedometerReading < ActiveRecord::Base
   def self.daily_steps
     total = 0
     self.select do |e|
-      if e.date.today == Date.today
+      if e.date == Date.today
         total += e.steps
       end
     end
