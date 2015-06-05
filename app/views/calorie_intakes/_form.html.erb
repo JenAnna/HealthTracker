@@ -13,13 +13,13 @@
 
   <div class="field">
     <%= f.label :calories %><br>
-    <%= f.number_field :calories %>
+    <%= f.number_field :calories, class: "entry_field" %>
   </div>
   <div class="field">
     <%= f.label :date %><br>
-    <%= f.date_field :date %>
+    <%= f.date_field :date, class: "entry_field" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :Enter, class: 'entry_field'%>
   </div>
 <% end %>

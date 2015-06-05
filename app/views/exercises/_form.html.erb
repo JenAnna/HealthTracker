@@ -13,22 +13,22 @@
 
   <div class="field">
     <%= f.label :exercise_type_id %><br>
-    <%= f.select :exercise_type_id, [["Aerobics", 1], ["Aerobics, Low Impact", 2], ["Calisthenics, light", 3], ["Calisthenics, fast", 4], ["Cycling", 5], ["Walking", 6], ["Yoga", 7]] %>
+    <%= f.select :exercise_type_id, [["Aerobics", 1], ["Aerobics, Low Impact", 2], ["Calisthenics, light", 3], ["Calisthenics, fast", 4], ["Cycling", 5], ["Walking", 6], ["Yoga", 7]], {}, {class: "entry_field"}  %>
   </div>
   <div class="field">
     <%= f.label :time_in_minutes %><br>
-    <%= f.number_field :time_in_minutes %>
+    <%= f.number_field :time_in_minutes, class: "entry_field" %>
   </div>
   <div class="field">
     <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= f.text_field :description, class: "entry_field" %>
   </div>
   <div class="field">
     <%= f.label :date %><br>
-    <%= f.date_field :date %>
+    <%= f.date_field :date, class: "entry_field" %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :Enter, class: 'entry_field' %>
   </div>
 <% end %>
