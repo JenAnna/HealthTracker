@@ -16,9 +16,13 @@
 </p>
 
 <button class="btn">
-<%= link_to 'Edit', edit_weigh_in_path(@weigh_in) %> 
+  <%= link_to 'Home', root_path %>
 </button>
 
 <button class="btn">
-<%= link_to 'Back', weigh_ins_path %>
+<%= link_to 'Edit', edit_weigh_in_path(@weigh_in) %>
+</button>
+
+<button class="btn">
+<%= link_to 'All Entries', weigh_ins_path %>
 </button>

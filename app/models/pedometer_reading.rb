@@ -7,6 +7,11 @@ class PedometerReading < ActiveRecord::Base
     self.calories_burned = self.steps/20
   end
 
+  def self.daily_step_calories
+    calories_step = self.select {|e| e.date == Date.today}
+    calories_step.sum &:calories_burned
+  end
+
   def miles
     self.steps/2000
   end

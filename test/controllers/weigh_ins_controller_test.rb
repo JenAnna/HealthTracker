@@ -18,7 +18,7 @@ class WeighInsControllerTest < ActionController::TestCase
 
   test "should create weigh_in" do
     assert_difference('WeighIn.count') do
-      post :create, weigh_in: { units: @weigh_in.units, weight: @weigh_in.weight, date: "2014-05-02" }
+    post :create, weigh_in: { units: @weigh_in.units, weight: @weigh_in.weight, date: "2015-06-01"}
     end
 
     assert_redirected_to weigh_in_path(assigns(:weigh_in))

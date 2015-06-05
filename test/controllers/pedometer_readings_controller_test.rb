@@ -18,8 +18,8 @@ class PedometerReadingsControllerTest < ActionController::TestCase
 
   test "should create pedometer_reading" do
     assert_difference('PedometerReading.count') do
-      post :create, pedometer_reading: { steps: @pedometer_reading.steps, date: Date.today }
-    end
+    post :create, pedometer_reading: { steps: @pedometer_reading.steps, date: "2015-06-01" }
+  end
 
     assert_redirected_to pedometer_reading_path(assigns(:pedometer_reading))
   end

@@ -5,6 +5,14 @@
   <%= @pedometer_reading.steps %>
 </p>
 
-<%= link_to 'Edit', edit_pedometer_reading_path(@pedometer_reading) %> |
-<%= link_to 'Back', pedometer_readings_path %>
-<%= link_to 'Home', root_path %>
+<button class="btn">
+<%= link_to 'Edit', edit_pedometer_reading_path(@pedometer_reading) %>
+</button>
+
+<button class="btn">
+<%= link_to 'All Entries', pedometer_readings_path %>
+</button>
+
+<button class="btn">
+  <%= link_to 'Home', root_path %>
+</button>
