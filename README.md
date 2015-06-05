@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #HealthTracker
 
 The HealthTracker application will track the user's calorie consumption and activities. It is simple to use but effective in helping the user meet there weight goals.
@@ -44,3 +45,7 @@ All pages have access links to the index of other .
   edit: html
   new: html
   show: json and html  
+
+##ERD Chart
+
+https://www.lucidchart.com/documents/edit/0f46465c-c4af-4811-b9a1-7f646caa9dea?
