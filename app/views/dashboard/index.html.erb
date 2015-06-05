@@ -1,13 +1,26 @@
 <div class="title">Your Health Tracker</div>
 
-<p class="dash">Net Calories Today</p>
-<p class="dash">Total Calories Consumed Today</p>
-<p><%= @calorie_intakes.calories_today %></p>
-<p class="dash">Total Calories Burned Today</p>
-<p><%= @exercises.daily_calories_burned%></p>
-
-<p class="dash">Total Steps Taken Today</p>
-<p><%= @pedometer_readings.daily_steps %></p>
+<div class="dash"  id="important">
+  <p class="in-dash">Net Calories Today</p>
+  <p class="number"><%= @calorie_intakes.calories_today -  @exercises.daily_calories_burned%></p>
+</div><br>
+<div class="information">
+  <div class="dash">
+    <p class="in-dash">Total Calories Consumed Today</p>
+    <p class="number"><%= @calorie_intakes.calories_today %></p>
+    <button class="btn"><%= link_to 'Enter New', new_calorie_intake_path %></button>
+  </div>
+  <div class="dash">
+    <p class="in-dash">Total Calories Burned Today</p>
+    <p class="number"><%= @exercises.daily_calories_burned%></p>
+    <button class="btn"><%= link_to 'Enter New', new_exercise_path %></button>
+  </div>
+  <div class="dash">
+    <p class="in-dash">Total Steps Taken Today</p>
+    <p class="number"><%= @pedometer_readings.daily_steps %></p>
+    <button class="btn"><%= link_to 'Enter New', new_pedometer_reading_path %></button>
+  </div>
+</div>
 
 
 <div class="foot">

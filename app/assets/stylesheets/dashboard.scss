@@ -4,16 +4,46 @@
 
 .title{
   display: block;
-  font-size: 30px;
+  font-size: 36px;
   padding: 5px;
-  width: 400px;
+  width: 500px;
   margin-left: auto;
   margin-right: auto;
   font-weight: bolder;
 }
 
+#important{
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.information{
+  text-align: center;
+}
+
 .dash{
-  font-size: 20px;
+  text-align: center;
+  font-size: 26px;
   display: inline-block;
-  border: 2px solid black;
+  border: 2px solid #8c4646;
+  padding: 20px;
+  width: 22%;
+  height: 200px;
+  margin: 20px;
+}
+
+.number{
+  color: #8c4646;
+  font-size: 30px;
+
+}
+
+.in-dash{
+  font-size: 20px;
+}
+
+.btn{
+  margin-top: 30px;
 }
