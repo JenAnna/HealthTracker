@@ -22,9 +22,9 @@
         <td><%= exercise.calories_burned %></td>
         <td><%= exercise.time_in_minutes %></td>
         <td><%= exercise.date%></td>
-        <td><%= link_to 'Show', weigh_in %></td>
-        <td><%= link_to 'Edit', edit_weigh_in_path(weigh_in) %></td>
-        <td><%= link_to 'Destroy', weigh_in, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', exercise %></td>
+        <td><%= link_to 'Edit', edit_exercise_path(exercise) %></td>
+        <td><%= link_to 'Destroy', exercise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,6 @@
 
 <br>
 
+<button class="btn">
 <%= link_to 'New Exercise Entry', new_exercise_path %>
+</button>

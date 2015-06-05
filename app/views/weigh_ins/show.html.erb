@@ -15,5 +15,10 @@
   <%= @weigh_in.date %>
 </p>
 
-<%= link_to 'Edit', edit_weigh_in_path(@weigh_in) %> |
+<button class="btn">
+<%= link_to 'Edit', edit_weigh_in_path(@weigh_in) %> 
+</button>
+
+<button class="btn">
 <%= link_to 'Back', weigh_ins_path %>
+</button>
