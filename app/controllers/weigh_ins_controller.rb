@@ -4,7 +4,7 @@ class WeighInsController < ApplicationController
   # GET /weigh_ins
   # GET /weigh_ins.json
   def index
-    @weigh_ins = WeighIn.all
+    @weigh_ins = WeighIn.find(params[:user_id])
   end
 
   # GET /weigh_ins/1
@@ -69,6 +69,6 @@ class WeighInsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def weigh_in_params
-      params.require(:weigh_in).permit(:weight, :units, :date)
+      params.require(:weigh_in, :user_id).permit(:weight, :units, :date)
     end
 end
