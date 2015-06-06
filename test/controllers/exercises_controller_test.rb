@@ -20,7 +20,11 @@ class ExercisesControllerTest < ActionController::TestCase
   test "should create exercise" do
     e = ExerciseType.create(description: "fake", calories_burned_per_minute: 5)
     assert_difference('Exercise.count') do
+<<<<<<< HEAD
+      post :create, exercise: { exercise_type_id: @exercise.exercise_type_id, date: "2014-04-03", time_in_minutes: @exercise.time_in_minutes  }
+=======
       post :create, exercise: { exercise_type_id: e.id, date: "2014-05-03", time_in_minutes: 30, description: "running", calories_burned: 300  }
+>>>>>>> 87b0623c6a3eae786bc8a8bd5d97356e8a8a8669
     end
 
     assert_redirected_to exercise_path(assigns(:exercise))
