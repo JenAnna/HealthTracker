@@ -4,18 +4,22 @@ one:
   steps: 1000
   calories_burned: 200
   date: <%= Date.new(2015, 06, 03)%>
+  user_id: 1
 
 two:
   steps: 2500
   calories_burned: 380
   date: <%= Date.today%>
+  user_id: 1
 
 three:
   steps: 150
   calories_burned: 10
   date: <%= Date.new(2015, 06, 03)%>
+  user_id: 1
 
 four:
   steps: 250
   calories_burned: 20
   date: <%= Date.today%>
+  user_id: 1

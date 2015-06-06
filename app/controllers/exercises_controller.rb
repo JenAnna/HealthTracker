@@ -2,7 +2,7 @@ class ExercisesController < ApplicationController
   before_action :set_exercise, only: [:show, :edit, :update, :destroy]
 
   def index
-    @exercises = Exercise.find(params[:user_id])
+    @exercises = Exercise.where(user_id: params[:user_id]).all
   end
 
   def show

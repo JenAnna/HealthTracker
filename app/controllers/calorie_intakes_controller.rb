@@ -4,7 +4,7 @@ class CalorieIntakesController < ApplicationController
   # GET /calorie_intakes
   # GET /calorie_intakes.json
   def index
-    @calorie_intakes = CalorieIntake.find(params[:user_id])
+    @calorie_intakes = CalorieIntake.where(user_id: params[:user_id]).all
   end
 
   # GET /calorie_intakes/1

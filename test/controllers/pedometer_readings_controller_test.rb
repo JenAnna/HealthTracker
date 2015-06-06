@@ -6,7 +6,7 @@ class PedometerReadingsControllerTest < ActionController::TestCase
   end
 
   test "should get index" do
-    get :index
+    get :index, user_id: 1
     assert_response :success
     assert_not_nil assigns(:pedometer_readings)
   end
@@ -18,7 +18,7 @@ class PedometerReadingsControllerTest < ActionController::TestCase
 
   test "should create pedometer_reading" do
     assert_difference('PedometerReading.count') do
-    post :create, pedometer_reading: { steps: @pedometer_reading.steps, date: "2015-06-01" }
+    post :create, pedometer_reading: { steps: @pedometer_reading.steps, date: "2015-06-01",  user_id: 1 }
   end
 
     assert_redirected_to pedometer_reading_path(assigns(:pedometer_reading))
@@ -35,7 +35,7 @@ class PedometerReadingsControllerTest < ActionController::TestCase
   end
 
   test "should update pedometer_reading" do
-    patch :update, id: @pedometer_reading, pedometer_reading: { steps: @pedometer_reading.steps, date: Date.today }
+    patch :update, id: @pedometer_reading, pedometer_reading: { steps: @pedometer_reading.steps, date: Date.today,  user_id: 1 }
     assert_redirected_to pedometer_reading_path(assigns(:pedometer_reading))
   end
 

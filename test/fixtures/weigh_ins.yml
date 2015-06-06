@@ -4,13 +4,16 @@ one:
   weight: 100
   units: MyString
   date: <%= Date.new(2015, 06, 02)%>
+  user_id: 1
 
 two:
   weight: 110
   units: MyString
   date: <%= Date.new(2015, 06, 03)%>
+  user_id: 1
 
 three:
   weight: 120
   units: MyString
   date: <%= Date.today %>
+  user_id: 1

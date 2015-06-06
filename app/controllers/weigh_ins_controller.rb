@@ -4,7 +4,7 @@ class WeighInsController < ApplicationController
   # GET /weigh_ins
   # GET /weigh_ins.json
   def index
-    @weigh_ins = WeighIn.find(params[:user_id])
+    @weigh_ins = WeighIn.where(user_id: params[:user_id]).all
   end
 
   # GET /weigh_ins/1

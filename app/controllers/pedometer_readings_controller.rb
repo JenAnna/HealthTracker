@@ -4,7 +4,7 @@ class PedometerReadingsController < ApplicationController
   # GET /pedometer_readings
   # GET /pedometer_readings.json
   def index
-    @pedometer_readings = PedometerReading.find(params[:user_id])
+    @pedometer_readings = PedometerReading.where(user_id: params[:user_id]).all
   end
 
   # GET /pedometer_readings/1
