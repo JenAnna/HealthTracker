@@ -20,7 +20,6 @@ class CalorieIntakesControllerTest < ActionController::TestCase
     assert_difference('CalorieIntake.count') do
     post :create, calorie_intake: { calories: @calorie_intake.calories, date: "2015-06-01", user_id: 1 }
   end
-
     assert_redirected_to calorie_intake_path(assigns(:calorie_intake))
   end
 
@@ -43,7 +42,7 @@ class CalorieIntakesControllerTest < ActionController::TestCase
     assert_difference('CalorieIntake.count', -1) do
       delete :destroy, id: @calorie_intake
     end
-
     assert_redirected_to calorie_intakes_path
   end
+
 end

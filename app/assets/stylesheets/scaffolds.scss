@@ -6,6 +6,25 @@ body {
   line-height: 18px;
 }
 
+#container {
+   min-height:100%;
+   position:relative;
+}
+
+#body {
+   padding:10px;
+   padding-bottom:60px;
+}
+
+#footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 60px
+}
+
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -29,11 +48,6 @@ a {
   }
 }
 
-div {
-  &.field, &.actions {
-    margin-bottom: 10px;
-  }
-}
 
 #notice {
   color: green;
