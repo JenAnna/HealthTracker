@@ -5,6 +5,7 @@ class PedometerReadingsController < ApplicationController
   # GET /pedometer_readings.json
   def index
     @pedometer_readings = PedometerReading.where(user_id: params[:user_id]).all
+    @user_id = params[:user_id]
   end
 
   # GET /pedometer_readings/1
@@ -19,12 +20,13 @@ class PedometerReadingsController < ApplicationController
 
   # GET /pedometer_readings/1/edit
   def edit
+    @user_id = params[:user_id]
   end
 
   # POST /pedometer_readings
   # POST /pedometer_readings.json
   def create
-    @pedometer_reading = PedometerReading.new(pedometer_reading_params)
+    @pedometer_reading = PedometerReading.new(pedometer_reading_params, user_id: params[:user_id])
 
     respond_to do |format|
       if @pedometer_reading.save
@@ -40,6 +42,7 @@ class PedometerReadingsController < ApplicationController
   # PATCH/PUT /pedometer_readings/1
   # PATCH/PUT /pedometer_readings/1.json
   def update
+    @user_id = params[:user_id]
     respond_to do |format|
       if @pedometer_reading.update(pedometer_reading_params)
         format.html { redirect_to @pedometer_reading, notice: 'Pedometer reading was successfully updated.' }

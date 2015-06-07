@@ -16,13 +16,13 @@
 </p>
 
 <button class="btn">
-  <%= link_to 'Home', root_path %>
+  <%= link_to 'Home', root_path(user_id: @user_id) %>
 </button>
 
 <button class="btn">
-<%= link_to 'Edit', edit_weigh_in_path(@weigh_in) %>
+<%= link_to 'Edit', edit_weigh_in_path(@weigh_in, user_id: @user_id) %>
 </button>
 
 <button class="btn">
-<%= link_to 'All Entries', weigh_ins_path %>
+<%= link_to 'All Entries', weigh_ins_path(user_id: @user_id) %>
 </button>

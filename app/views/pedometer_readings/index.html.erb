@@ -17,7 +17,7 @@
         <td><%= pedometer_reading.steps %></td>
         <td><%= pedometer_reading.date %></td>
         <td><%= link_to 'Show', pedometer_reading %></td>
-        <td><%= link_to 'Edit', edit_pedometer_reading_path(pedometer_reading) %></td>
+        <td><%= link_to 'Edit', edit_pedometer_reading_path(pedometer_reading, user_id: @user_id) %></td>
         <td><%= link_to 'Destroy', pedometer_reading, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -31,8 +31,8 @@
 </button>
 
 <div class="foot">
-  <button class="btn"><%= link_to 'Home', root_path %></button>
-  <button class="btn"><%= link_to 'Weigh-ins', weigh_ins_path %></button>
-  <button class="btn"><%= link_to 'Calories Consumed', calorie_intakes_path %></button>
-  <button class="btn"><%= link_to 'Exercises', exercises_path %></button>
+  <button class="btn"><%= link_to 'Home', root_path(user_id: @user_id) %></button>
+  <button class="btn"><%= link_to 'Weigh-ins', weigh_ins_path(user_id: @user_id) %></button>
+  <button class="btn"><%= link_to 'Calories Consumed', calorie_intakes_path(user_id: @user_id) %></button>
+  <button class="btn"><%= link_to 'Exercises', exercises_path(user_id: @user_id) %></button>
 </div>

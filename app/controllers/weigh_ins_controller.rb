@@ -5,6 +5,7 @@ class WeighInsController < ApplicationController
   # GET /weigh_ins.json
   def index
     @weigh_ins = WeighIn.where(user_id: params[:user_id]).all
+    @user_id = params[:user_id]
   end
 
   # GET /weigh_ins/1
@@ -14,17 +15,18 @@ class WeighInsController < ApplicationController
 
   # GET /weigh_ins/new
   def new
-    @weigh_in = WeighIn.new
+    @weigh_in = WeighIn.new(user_id: params[:user_id])
   end
 
   # GET /weigh_ins/1/edit
   def edit
+    @user_id = params[:user_id]
   end
 
   # POST /weigh_ins
   # POST /weigh_ins.json
   def create
-    @weigh_in = WeighIn.new(weigh_in_params)
+    @weigh_in = WeighIn.new(weigh_in_params, user_id: params[:user_id])
 
     respond_to do |format|
       if @weigh_in.save
@@ -40,6 +42,7 @@ class WeighInsController < ApplicationController
   # PATCH/PUT /weigh_ins/1
   # PATCH/PUT /weigh_ins/1.json
   def update
+    @user_id = params[:user_id]
     respond_to do |format|
       if @weigh_in.update(weigh_in_params)
         format.html { redirect_to @weigh_in, notice: 'Weigh in was successfully updated.' }
