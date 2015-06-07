@@ -7,4 +7,4 @@
 
 <%= link_to 'Edit', edit_calorie_intake_path(@calorie_intake) %> |
 <%= link_to 'Back', calorie_intakes_path(user_id: @user_id) %>
-<%= link_to 'Home', root_path(user_id: @user_id) %>
+<%= link_to 'Home', dashboard_index_path(user_id: @user_id) %>

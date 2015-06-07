@@ -1,13 +1,17 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   resources :users
   resources :calorie_intakes
   resources :pedometer_readings
   resources :weigh_ins
   resources :exercises
 
-  root 'dashboard#index'
+  root 'sessions#new'
   get 'dashboard/index'
   get 'steps' => 'pedometer_readings#index'
+  get 'sessions/new'
+  get 'login' => 'sessions#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
