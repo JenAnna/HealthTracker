@@ -2,7 +2,7 @@ class ExercisesController < ApplicationController
   before_action :set_exercise, only: [:show, :edit, :update, :destroy]
 
   def index
-    @exercises = Exercise.all
+    @exercises = Exercise.where(user_id: params[:user_id]).all
   end
 
   def show
@@ -55,7 +55,7 @@ class ExercisesController < ApplicationController
   end
 
   private def exercise_params
-    params.require(:exercise).permit(:exercise_type_id, :time_in_minutes, :calories_burned, :description, :date)
+    params.require(:exercise).permit(:exercise_type_id, :time_in_minutes, :calories_burned, :description, :date, :user_id)
   end
 
 end

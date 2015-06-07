@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   resources :calorie_intakes
   resources :pedometer_readings
   resources :weigh_ins

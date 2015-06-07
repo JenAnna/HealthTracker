@@ -6,7 +6,7 @@ class CalorieIntakesControllerTest < ActionController::TestCase
   end
 
   test "should get index" do
-    get :index
+    get :index, user_id: 1
     assert_response :success
     assert_not_nil assigns(:calorie_intakes)
   end
@@ -18,9 +18,8 @@ class CalorieIntakesControllerTest < ActionController::TestCase
 
   test "should create calorie_intake" do
     assert_difference('CalorieIntake.count') do
-    post :create, calorie_intake: { calories: @calorie_intake.calories, date: "2015-06-01" }
+    post :create, calorie_intake: { calories: @calorie_intake.calories, date: "2015-06-01", user_id: 1 }
   end
-
     assert_redirected_to calorie_intake_path(assigns(:calorie_intake))
   end
 
@@ -35,7 +34,7 @@ class CalorieIntakesControllerTest < ActionController::TestCase
   end
 
   test "should update calorie_intake" do
-    patch :update, id: @calorie_intake, calorie_intake: { calories: @calorie_intake.calories, date: Date.today }
+    patch :update, id: @calorie_intake, calorie_intake: { calories: @calorie_intake.calories, date: Date.today, user_id: 1 }
     assert_redirected_to calorie_intake_path(assigns(:calorie_intake))
   end
 
@@ -43,7 +42,7 @@ class CalorieIntakesControllerTest < ActionController::TestCase
     assert_difference('CalorieIntake.count', -1) do
       delete :destroy, id: @calorie_intake
     end
-
     assert_redirected_to calorie_intakes_path
   end
+
 end

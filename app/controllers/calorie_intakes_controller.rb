@@ -4,7 +4,7 @@ class CalorieIntakesController < ApplicationController
   # GET /calorie_intakes
   # GET /calorie_intakes.json
   def index
-    @calorie_intakes = CalorieIntake.all
+    @calorie_intakes = CalorieIntake.where(user_id: params[:user_id]).all
   end
 
   # GET /calorie_intakes/1
@@ -69,6 +69,6 @@ class CalorieIntakesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def calorie_intake_params
-      params.require(:calorie_intake).permit(:calories, :date)
+      params.require(:calorie_intake).permit(:calories, :date, :user_id)
     end
 end

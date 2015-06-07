@@ -3,15 +3,19 @@
 one:
   calories: 3500
   date: <%= Date.new(2015, 06, 03)%>
+  user_id: 1
 
 two:
   calories: 2750
   date: <%=Date.new(2015, 05, 05)%>
+  user_id: 1
 
 three:
   calories: 150
   date: <%= Date.today %>
+  user_id: 1
 
 four:
   calories: 300
   date: <%= Date.today %>
+  user_id: 1

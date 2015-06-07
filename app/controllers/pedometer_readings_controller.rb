@@ -4,7 +4,7 @@ class PedometerReadingsController < ApplicationController
   # GET /pedometer_readings
   # GET /pedometer_readings.json
   def index
-    @pedometer_readings = PedometerReading.all
+    @pedometer_readings = PedometerReading.where(user_id: params[:user_id]).all
   end
 
   # GET /pedometer_readings/1
@@ -69,6 +69,6 @@ class PedometerReadingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pedometer_reading_params
-      params.require(:pedometer_reading).permit(:steps, :date)
+      params.require(:pedometer_reading).permit(:steps, :date, :user_id)
     end
 end
