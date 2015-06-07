@@ -8,17 +8,17 @@
   <div class="dash">
     <p class="in-dash">Total Calories Consumed Today</p>
     <p class="number"><%= @calorie_intakes.calories_today %></p>
-    <button class="btn"><%= link_to 'Enter New', new_calorie_intake_path %></button>
+    <button class="btn"><%= link_to 'Enter New', new_calorie_intake_path(user_id: @user_id) %></button>
   </div>
   <div class="dash">
     <p class="in-dash">Total Calories Burned Today</p>
     <p class="number"><%= @exercises.daily_calories_burned%></p>
-    <button class="btn"><%= link_to 'Enter New', new_exercise_path %></button>
+    <button class="btn"><%= link_to 'Enter New', new_exercise_path(user_id: @user_id) %></button>
   </div>
   <div class="dash">
     <p class="in-dash">Total Steps Taken Today</p>
     <p class="number"><%= @pedometer_readings.daily_steps %></p>
-    <button class="btn"><%= link_to 'Enter New', new_pedometer_reading_path %></button>
+    <button class="btn"><%= link_to 'Enter New', new_pedometer_reading_path(user_id: @user_id) %></button>
   </div>
 </div>
 
