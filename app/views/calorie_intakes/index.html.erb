@@ -1,38 +1,45 @@
-<p id="notice"><%= notice %></p>
+<div id="container">
+  <div id="header">
+  </div>
 
-<h1>Listing Calorie Intakes</h1>
+  <div id="body">
+    <p id="notice"><%= notice %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Calories</th>
-      <th>Date</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <h1>Listing Calorie Intakes</h1>
 
-  <tbody>
-    <% @calorie_intakes.each do |calorie_intake| %>
-      <tr>
-        <td><%= calorie_intake.calories %></td>
-        <td><%= calorie_intake.date %></td>
-        <td><%= link_to 'Show', calorie_intake %></td>
-        <td><%= link_to 'Edit', edit_calorie_intake_path(calorie_intake) %></td>
-        <td><%= link_to 'Destroy', calorie_intake, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <table>
+      <thead>
+        <tr>
+          <th>Calories</th>
+          <th>Date</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-<br>
+      <tbody>
+        <% @calorie_intakes.each do |calorie_intake| %>
+          <tr>
+            <td><%= calorie_intake.calories %></td>
+            <td><%= calorie_intake.date %></td>
+            <td><%= link_to 'Show', calorie_intake %></td>
+            <td><%= link_to 'Edit', edit_calorie_intake_path(calorie_intake) %></td>
+            <td><%= link_to 'Destroy', calorie_intake, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-<button class="btn">
-<%= link_to 'New Calorie intake', new_calorie_intake_path %>
-</button>
+    <br>
 
-<div class="foot">
-  <button class="btn"><%= link_to 'Home', root_path %></button>
-  <button class="btn"><%= link_to 'Pedometer readings', pedometer_readings_path %></button>
-  <button class="btn"><%= link_to 'Weigh-ins', weigh_ins_path %></button>
-  <button class="btn"><%= link_to 'Exercises', exercises_path %></button>
+    <button class="btn">
+    <%= link_to 'New Calorie intake', new_calorie_intake_path %>
+    </button>
+  </div>
+
+  <div id="footer">
+    <button class="btn"><%= link_to 'Home', root_path %></button>
+    <button class="btn"><%= link_to 'Pedometer readings', pedometer_readings_path %></button>
+    <button class="btn"><%= link_to 'Weigh-ins', weigh_ins_path %></button>
+    <button class="btn"><%= link_to 'Exercises', exercises_path %></button>
+  </div>
 </div>
