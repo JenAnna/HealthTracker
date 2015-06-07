@@ -3,21 +3,24 @@ class ExercisesController < ApplicationController
 
   def index
     @exercises = Exercise.where(user_id: params[:user_id]).all
+    @user_id = params[:user_id]
   end
 
   def show
-
+    @user_id = params[:user_id]
   end
 
   def new
     @exercise = Exercise.new
+    @user_id = params[:user_id]
   end
 
   def edit
+    @user_id = params[:user_id]
   end
 
   def create
-    @exercise = Exercise.new(exercise_params)
+    @exercise = Exercise.new(exercise_params, user_id: @user_id)
 
     respond_to do |format|
       if @exercise.save

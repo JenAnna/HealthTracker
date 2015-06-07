@@ -5,26 +5,30 @@ class CalorieIntakesController < ApplicationController
   # GET /calorie_intakes.json
   def index
     @calorie_intakes = CalorieIntake.where(user_id: params[:user_id]).all
+    @user_id = params[:user_id]
   end
 
   # GET /calorie_intakes/1
   # GET /calorie_intakes/1.json
   def show
+    @user_id = params[:user_id]
   end
 
   # GET /calorie_intakes/new
   def new
     @calorie_intake = CalorieIntake.new
+    @user_id = params[:user_id]
   end
 
   # GET /calorie_intakes/1/edit
   def edit
+    @user_id = params[:user_id]
   end
 
   # POST /calorie_intakes
   # POST /calorie_intakes.json
   def create
-    @calorie_intake = CalorieIntake.new(calorie_intake_params)
+    @calorie_intake = CalorieIntake.new(calorie_intake_params, user_id: params[:user_id])
 
     respond_to do |format|
       if @calorie_intake.save
