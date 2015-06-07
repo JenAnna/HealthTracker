@@ -12,20 +12,14 @@
       <div class="dash">
         <p class="in-dash">Total Calories Consumed Today</p>
         <p class="number"><%= @calorie_intakes.calories_today %></p>
-        <%= render 'calorie_intakes/form' %>
       </div>
       <div class="dash">
         <p class="in-dash">Total Calories Burned Today</p>
         <p class="number"><%= @exercises.daily_calories_burned%></p>
-        <% render 'exercises/form' %>
       </div>
       <div class="dash">
         <p class="in-dash">Total Steps Taken Today</p>
         <p class="number"><%= @pedometer_readings.daily_steps %></p>
-        <% render 'pedometer_readings/form'%>
-      </div>
-      <div class="dash">
-        <% render 'weigh_ins/form'%>
       </div>
     </div>
   </div>
