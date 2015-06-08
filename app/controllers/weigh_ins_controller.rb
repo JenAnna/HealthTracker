@@ -15,7 +15,7 @@ class WeighInsController < ApplicationController
 
   # GET /weigh_ins/new
   def new
-    @weigh_in = WeighIn.new(user_id: params[:user_id])
+    @weigh_in = WeighIn.new
   end
 
   # GET /weigh_ins/1/edit

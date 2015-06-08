@@ -21,7 +21,9 @@ class ExercisesController < ApplicationController
 
   def create
     @exercise = Exercise.new(exercise_params, user_id: @user_id)
-
+    if @exercise.save
+      @exercise.calculate_calories_burned
+    end
     respond_to do |format|
       if @exercise.save
         format.html { redirect_to @exercise, notice: 'Exercise was successfully created.' }
